@@ -3,13 +3,16 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "zipSize": 52428800
+      }
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "server.js"
+      "destination": "/server.js"
     }
   ]
 }
