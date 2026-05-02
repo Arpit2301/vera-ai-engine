@@ -8,6 +8,14 @@
   ],
   "routes": [
     {
+      "src": "/v1/healthz",
+      "dest": "server.js"
+    },
+    {
+      "src": "/v1/(.*)",
+      "dest": "server.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "server.js"
     }
